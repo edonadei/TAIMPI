@@ -1,4 +1,9 @@
 #include <iostream>
+#include "automate.h"
+#include "fichier.h"
+#include "etat.h"
+#include "transition.h"
+#include <vector>
 
 using namespace std;
 
