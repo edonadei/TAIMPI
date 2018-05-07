@@ -13,11 +13,11 @@ public:
     ~Etat();
 
 // Attacher une transition à l'état
-    Attacher(Transition &Transition1);
+    void Attacher(Transition &Transition1);
 
 private:
 // Relation many to many
-     Attacher_en_retour(Transition &Transition1);
+     void Attacher_en_retour(Transition &Transition1);
 
 protected:
     bool poubelle;

@@ -6,14 +6,47 @@
 	"fichier.h"
 	"transition.h"
 
-1525686957 c:\users\emrick-pc-portable\documents\github\taimpi\automate.h
+1525704482 c:\users\emrick-pc-portable\documents\github\taimpi\automate.h
+	<iostream>
+	"automate.h"
+	"fichier.h"
+	"etat.h"
+	"transition.h"
+	<vector>
 
-1525688286 c:\users\emrick-pc-portable\documents\github\taimpi\etat.h
+1525702791 c:\users\emrick-pc-portable\documents\github\taimpi\etat.h
 	<vector>
 	"transition.h"
 
-1525688300 c:\users\emrick-pc-portable\documents\github\taimpi\transition.h
+1525702821 c:\users\emrick-pc-portable\documents\github\taimpi\transition.h
 	<vector>
 
 1525686957 c:\users\emrick-pc-portable\documents\github\taimpi\fichier.h
+
+1525685140 source:c:\users\emrick-pc-portable\documents\github\taimpi\fichier.cpp
+	<iostream>
+	"automate.h"
+	"etat.h"
+	"fichier.h"
+	"transition.h"
+
+1525685140 source:c:\users\emrick-pc-portable\documents\github\taimpi\main.cpp
+	<iostream>
+	"automate.h"
+	"fichier.h"
+	"etat.h"
+	"transition.h"
+	<vector>
+
+1525702809 source:c:\users\emrick-pc-portable\documents\github\taimpi\transition.cpp
+	<iostream>
+	"transition.h"
+	"etat.h"
+	<vector>
+
+1525702768 source:c:\users\emrick-pc-portable\documents\github\taimpi\etat.cpp
+	<iostream>
+	"etat.h"
+	"transition.h"
+	<vector>
 

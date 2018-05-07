@@ -16,11 +16,11 @@ public:
     ~Transition();
 
     // Attacher un état à la transition
-    Attacher(Etat &Etat1);
+    void Attacher(Etat &Etat1);
 
 private:
     // Relation many to many
-    Attacher_en_retour(Etat &Etat1);
+    void Attacher_en_retour(Etat &Etat1);
 
 protected:
     std::string lettre;
