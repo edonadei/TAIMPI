@@ -3,8 +3,6 @@
 #include <vector>
 #include "transition.h"
 
-using namespace std;
-
 class Etat
 {
 // Utile de friend pour faire des liens entre les deux
@@ -25,7 +23,7 @@ protected:
     bool poubelle;
     bool entree;
     bool sortie;
-    vector<Transition*> TrList;
+    std::vector<Transition*> TrList;
 };
 
 #endif // ETAT_H_INCLUDED

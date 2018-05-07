@@ -1,10 +1,9 @@
 #ifndef TRANSITION_H_INCLUDED
 #define TRANSITION_H_INCLUDED
 #include <vector>
-#include "etat.h"
 
-
-using namespace std;
+// Forward declaration
+class Etat;
 
 class Transition
 {
@@ -24,8 +23,8 @@ private:
     Attacher_en_retour(Etat &Etat1);
 
 protected:
-    string lettre;
-    vector<Etat*> EtList;
+    std::string lettre;
+    std::vector<Etat*> EtList;
 };
 
 #endif // TRANSITION_H_INCLUDED

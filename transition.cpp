@@ -1,11 +1,19 @@
 #include <iostream>
-#include "automate.h"
-#include "etat.h"
-#include "fichier.h"
 #include "transition.h"
+#include "etat.h"
 #include <vector>
 
 using namespace std;
+
+Transition::Transition()
+{
+
+}
+
+Transition::~Transition()
+{
+
+}
 
 Transition::Attacher(Etat &Etat1)
     {

@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1525685050 source:c:\users\emrick-pc-portable\documents\github\taimpi\automate.cpp
+	<iostream>
+	"automate.h"
+	"etat.h"
+	"fichier.h"
+	"transition.h"
+
+1525686957 c:\users\emrick-pc-portable\documents\github\taimpi\automate.h
+
+1525688286 c:\users\emrick-pc-portable\documents\github\taimpi\etat.h
+	<vector>
+	"transition.h"
+
+1525688300 c:\users\emrick-pc-portable\documents\github\taimpi\transition.h
+	<vector>
+
+1525686957 c:\users\emrick-pc-portable\documents\github\taimpi\fichier.h
+
