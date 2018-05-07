@@ -32,7 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="TAIMPI.layout" />
+		<Unit filename="automate.cpp" />
+		<Unit filename="automate.h" />
+		<Unit filename="etat.cpp" />
+		<Unit filename="etat.h" />
+		<Unit filename="fichier.cpp" />
+		<Unit filename="fichier.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="transition.cpp" />
+		<Unit filename="transition.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
