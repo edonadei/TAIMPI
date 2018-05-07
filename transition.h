@@ -12,7 +12,7 @@ class Transition
 friend class Etat;
 
 public:
-    Transition();
+    Transition(std::string _lettre="UNDEF");
     ~Transition();
 
     // Attacher un état à la transition

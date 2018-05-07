@@ -5,9 +5,9 @@
 
 using namespace std;
 
-Transition::Transition()
+Transition::Transition(string _lettre)
 {
-
+lettre = _lettre;
 }
 
 Transition::~Transition()
