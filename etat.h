@@ -5,24 +5,32 @@
 
 class Etat
 {
-// Utile de friend pour faire des liens entre les deux
+    // Utile de friend pour faire des liens entre les deux
 friend class Transition;
 
 public:
-    Etat();
+    // Constructeurs, Destructeurs
+    Etat(int _chiffre=0, bool _entree=false, bool _sortie=false, bool _poubelle=false);
     ~Etat();
 
-// Attacher une transition à l'état
-    void Attacher(Transition &Transition1);
+    // Attacher une transition à l'état
+    void Attacher_Entree(Transition &Transition1);
+    void Attacher_Sortie(Transition &Transition1);
+    // Getters
+    int get_number();
+    bool know_if_trash();
+    bool know_if_entrance();
+    bool know_if_exit();
 
 private:
-// Relation many to many
+    // Relation many to many
      void Attacher_en_retour(Transition &Transition1);
 
 protected:
     bool poubelle;
     bool entree;
     bool sortie;
+    int chiffre;
     std::vector<Transition*> TrList;
 };
 

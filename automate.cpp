@@ -12,10 +12,10 @@ Etat Etat_a_retourner;
 return Etat_a_retourner;
 }
 
-void creer_liaison (Etat &Etat_precedent, Etat &Etat_suivant, string lettre)
+void creer_liaison (Etat &Etat_entree, Etat &Etat_sortie, string lettre)
 {
 Transition Transition_entre_deux(lettre);
-Etat_precedent.Attacher(Transition_entre_deux);
-Etat_suivant.Attacher(Transition_entre_deux);
+Etat_entree.Attacher_Entree(Transition_entre_deux);
+Etat_sortie.Attacher_Sortie(Transition_entre_deux);
 }
 

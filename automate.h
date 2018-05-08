@@ -8,6 +8,6 @@
 #include <vector>
 
 Etat creer_etat ();
-void creer_liaison (Etat &Etat_a_lier, Etat &Etat_precedent, Etat &Etat_suivant);
+void creer_liaison (Etat &Etat_entree, Etat &Etat_sortie, std::string lettre);
 
 #endif // AUTOMATE_H_INCLUDED

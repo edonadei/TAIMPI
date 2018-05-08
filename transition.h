@@ -16,15 +16,18 @@ public:
     ~Transition();
 
     // Attacher un état à la transition
-    void Attacher(Etat &Etat1);
+    void AttacherEntree(Etat *Etat1);
+    void AttacherSortie(Etat *Etat1);
 
 private:
     // Relation many to many
-    void Attacher_en_retour(Etat &Etat1);
+    void Attacher_Entree_en_retour(Etat *Etat1);
+    void Attacher_Sortie_en_retour(Etat *Etat1);
 
 protected:
     std::string lettre;
-    std::vector<Etat*> EtList;
+    Etat* EtEntree;
+    Etat* EtSortie;
 };
 
 #endif // TRANSITION_H_INCLUDED
