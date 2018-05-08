@@ -19,7 +19,7 @@ public:
     void AttacherEntree(Etat *Etat1);
     void AttacherSortie(Etat *Etat1);
     std::string get_letter();
-    std::string lettre;
+
 
 private:
     // Relation many to many
@@ -27,7 +27,7 @@ private:
     void Attacher_Sortie_en_retour(Etat *Etat1);
 
 protected:
-
+    std::string lettre;
     Etat* EtEntree;
     Etat* EtSortie;
 };

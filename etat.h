@@ -14,8 +14,8 @@ public:
     ~Etat();
 
     // Attacher une transition à l'état
-    void Attacher_Entree(Transition &Transition1);
-    void Attacher_Sortie(Transition &Transition1);
+    void Attacher_Entree(Transition *Transition1);
+    void Attacher_Sortie(Transition *Transition1);
     // Getters
     int get_number();
     bool know_if_trash();
