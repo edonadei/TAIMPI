@@ -9,5 +9,6 @@
 
 Etat creer_etat ();
 void creer_liaison (Etat &Etat_entree, Etat &Etat_sortie, std::string lettre);
+void informations_etat (Etat &Etat_a_verifier);
 
 #endif // AUTOMATE_H_INCLUDED

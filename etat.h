@@ -22,6 +22,8 @@ public:
     bool know_if_entrance();
     bool know_if_exit();
 
+    std::vector<Transition*> TrList;
+
 private:
     // Relation many to many
      void Attacher_en_retour(Transition &Transition1);
@@ -31,7 +33,7 @@ protected:
     bool entree;
     bool sortie;
     int chiffre;
-    std::vector<Transition*> TrList;
+
 };
 
 #endif // ETAT_H_INCLUDED

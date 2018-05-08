@@ -16,25 +16,32 @@ Transition::~Transition()
 }
 
 void Transition::AttacherEntree(Etat *Etat1)
-    {
-        EtEntree = Etat1;
-        Etat1->Attacher_en_retour(*this);
-    }
+{
+    EtEntree = Etat1;
+    Etat1->Attacher_en_retour(*this);
+}
 
 void Transition::AttacherSortie (Etat *Etat1)
-    {
-        EtEntree = Etat1;
-        Etat1->Attacher_en_retour(*this);
-    }
+{
+    EtEntree = Etat1;
+    Etat1->Attacher_en_retour(*this);
+}
 
 void Transition::Attacher_Entree_en_retour(Etat *Etat1)
-    {
-        EtEntree = Etat1;
-    }
+{
+    EtEntree = Etat1;
+}
 
 void Transition::Attacher_Sortie_en_retour(Etat *Etat1)
-    {
-        EtSortie = Etat1;
-    }
+{
+    EtSortie = Etat1;
+}
+
+// Getters
+
+string Transition::get_letter()
+{
+    return lettre;
+};
 
 

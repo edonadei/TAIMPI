@@ -21,6 +21,9 @@ Etat::~Etat()
 void Etat::Attacher_Entree(Transition &Transition1)
 {
     TrList.push_back(&Transition1);
+    // Debug
+    //cout << Transition1.lettre << endl;
+    //cout << TrList[0]->lettre << endl;
     Transition1.Attacher_Entree_en_retour(this);
 }
 
