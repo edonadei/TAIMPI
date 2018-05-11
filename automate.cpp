@@ -37,7 +37,7 @@ void informations_etat (Etat &Etat_a_verifier)
 
 }
 
-vector<string> str_to_array(string str, char separator) { //Sépare str pour transformer en tab à chaque separateur
+vector<string> str_to_array(const string str, char separator) { //Sépare str pour transformer en tab à chaque separateur
 
     stringstream stream(str);
     string buff = "";
@@ -55,7 +55,7 @@ void split_str_to_array(vector< vector<string> > &tab_automate, const vector<str
     }
 }
 
-void transition_name(vector<string> &name, vector<string> tab){ //Tableau avec le nom des transitions
+void transition_name(vector<string> &name, const vector<string> tab){ //Tableau avec le nom des transitions
 
 for(unsigned i=2; i<tab.size();i++){
     name.push_back(tab[i]);
@@ -64,7 +64,7 @@ for(unsigned i=2; i<tab.size();i++){
 }
 
 
-void init_etat(Etat &etat, vector<string> tab_automate){ //Définie le.s type.s de l'état
+void init_etat(Etat &etat, const vector<string> tab_automate){ //Définie le.s type.s de l'état
     etat.set_chiffre(tab_automate[1]);
 
     if(tab_automate[0] == "E"){
@@ -77,7 +77,7 @@ void init_etat(Etat &etat, vector<string> tab_automate){ //Définie le.s type.s d
     }
 }
 
-void link_transition_etat(int ligne, vector<Etat*> ListEtats, vector<string> tab_automate, vector<string> tab_transition_name){ //Création tab avec toutes les liaisons de l'état
+void link_transition_etat(int ligne, vector<Etat*> ListEtats, const vector<string> tab_automate, const vector<string> tab_transition_name){ //Création tab avec toutes les liaisons de l'état
     int nbr_sortie;
     for (unsigned i=2;i<tab_automate.size();i++){ //Parcour toute les transition de l'état
         for(unsigned j=0;j<ListEtats.size();j++){
@@ -90,7 +90,7 @@ void link_transition_etat(int ligne, vector<Etat*> ListEtats, vector<string> tab
     }
 }
 
-void creat_etats(vector<Etat*> &ListEtats, vector< vector<string> > tab_automate, vector<string> tab_transition_name){
+void creat_etats(vector<Etat*> &ListEtats, const vector< vector<string> > tab_automate, const vector<string> tab_transition_name){
     //Création Etat
     for(unsigned i=1; i<tab_automate.size();i++){
         Etat *etat1 = new Etat;
