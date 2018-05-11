@@ -50,3 +50,59 @@
 	"transition.h"
 	<vector>
 
+1526083345 source:c:\users\dclae\documents\github\taimpi\automate.cpp
+	<iostream>
+	<string>
+	<vector>
+	<fstream>
+	<sstream>
+	<utility>
+	"automate.h"
+	"etat.h"
+	"fichier.h"
+	"transition.h"
+
+1526083655 c:\users\dclae\documents\github\taimpi\automate.h
+	<iostream>
+	"automate.h"
+	"fichier.h"
+	"etat.h"
+	"transition.h"
+	<vector>
+
+1525949578 c:\users\dclae\documents\github\taimpi\fichier.h
+
+1526067919 c:\users\dclae\documents\github\taimpi\etat.h
+	<vector>
+	"transition.h"
+
+1526083007 c:\users\dclae\documents\github\taimpi\transition.h
+	<vector>
+
+1526076449 source:c:\users\dclae\documents\github\taimpi\etat.cpp
+	<iostream>
+	"etat.h"
+	"transition.h"
+	<vector>
+
+1525949578 source:c:\users\dclae\documents\github\taimpi\fichier.cpp
+	<iostream>
+	"automate.h"
+	"etat.h"
+	"fichier.h"
+	"transition.h"
+
+1526081607 source:c:\users\dclae\documents\github\taimpi\main.cpp
+	<iostream>
+	"automate.h"
+	"fichier.h"
+	"etat.h"
+	"transition.h"
+	<vector>
+
+1526083059 source:c:\users\dclae\documents\github\taimpi\transition.cpp
+	<iostream>
+	"transition.h"
+	"etat.h"
+	<vector>
+

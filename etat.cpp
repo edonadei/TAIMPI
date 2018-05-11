@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Etat::Etat(int _chiffre, bool _entree, bool _sortie, bool _poubelle)
+Etat::Etat(string _chiffre, bool _entree, bool _sortie, bool _poubelle)
 {
 chiffre = _chiffre;
 entree = _entree;
@@ -26,7 +26,7 @@ void Etat::Attacher_Entree(Transition *Transition1)
 
 void Etat::Attacher_Sortie(Transition *Transition1)
 {
-    TrList.push_back(Transition1);
+    //TrList.push_back(Transition1);
     Transition1->Attacher_Sortie_en_retour(this);
 }
 
@@ -37,9 +37,38 @@ void Etat::Attacher_en_retour(Transition &Transition1)
 
 // Getters
 
-int Etat::get_number()
+string Etat::get_number()
 {
     return chiffre;
+}
+
+bool Etat::get_poubelle(){
+    return poubelle;
+}
+
+bool Etat::get_entree(){
+    return entree;
+}
+
+bool Etat::get_sortie(){
+    return sortie;
+}
+//Setters
+
+void Etat::set_chiffre(string _chiffre){
+    chiffre = _chiffre;
+}
+
+void Etat::set_poubelle(bool _poubelle){
+    poubelle = _poubelle;
+}
+
+void Etat::set_entree(bool _entree){
+    entree = _entree;
+}
+
+void Etat::set_sortie(bool _sortie){
+    sortie = _sortie;
 }
 
 bool Etat::know_if_trash()

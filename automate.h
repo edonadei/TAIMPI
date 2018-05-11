@@ -10,5 +10,12 @@
 Etat creer_etat ();
 void creer_liaison (Etat &Etat_entree, Etat &Etat_sortie, std::string lettre);
 void informations_etat (Etat &Etat_a_verifier);
+std::vector<std::string> str_to_array(std::string str, char separator);
+void split_str_to_array(std::vector< std::vector<std::string> > &tab_automate, const std::vector<std::string> ligne);
+void transition_name(std::vector<std::string> &name, std::vector<std::string> tab);
+void init_etat(Etat &etat, std::vector<std::string> tab_automate);
+void link_transition_etat(int ligne, std::vector<Etat*> ListEtats, std::vector<std::string> tab_automate, std::vector<std::string> tab_transition_name);
+void creat_etats(std::vector<Etat*> &ListEtats, std::vector< std::vector<std::string> > tab_automate, std::vector<std::string> tab_transition_name);
+void init_automate(std::vector<Etat*> &ListEtats);
 
 #endif // AUTOMATE_H_INCLUDED

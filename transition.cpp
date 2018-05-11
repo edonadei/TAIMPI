@@ -44,4 +44,10 @@ string Transition::get_letter()
     return lettre;
 };
 
+Etat* Transition::get_EtEntree(){
+    return EtEntree;
+};
 
+Etat* Transition::get_EtSortie(){
+    return EtSortie;
+};

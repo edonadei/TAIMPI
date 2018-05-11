@@ -19,6 +19,8 @@ public:
     void AttacherEntree(Etat *Etat1);
     void AttacherSortie(Etat *Etat1);
     std::string get_letter();
+    Etat* get_EtEntree();
+    Etat* get_EtSortie();
 
 
 private:
