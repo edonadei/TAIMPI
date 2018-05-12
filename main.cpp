@@ -24,6 +24,7 @@ int main()
     vector<Etat*> ListEtats;
     init_automate(ListEtats, transitionName);
     afficher_automate(ListEtats, transitionName);
+    cout << "Est-il asynchrone? : " <<est_un_automate_asynchrone(ListEtats) << endl;
 
     return 0;
 }

@@ -148,7 +148,7 @@ string afficher_type_etat(Etat etat){ //Donne le type de l'etat en lettre
         return "-";
     }
 }
-void afficher_automate(vector<Etat*> ListEtats, vector<string> transitionName){
+void afficher_automate(const vector<Etat*> ListEtats, const vector<string> transitionName){
 
     cout << "\t" << "Etat"; //Données du tableau
     for (unsigned i=0; i<transitionName.size(); i++){
@@ -162,5 +162,23 @@ void afficher_automate(vector<Etat*> ListEtats, vector<string> transitionName){
             cout << "\t" << ListEtats[i]->TrList[j]->get_letter();
         }
         cout << endl;
+    }
+}
+
+bool est_un_automate_asynchrone(const vector<Etat*> Automate){
+    bool asynchrone = false;
+    for(unsigned i=0;i<Automate.size();i++){
+        for(unsigned j=0; j<Automate[i]->TrList.size(); j++){
+            if(Automate[i]->TrList[j]->get_letter() == "-"){
+                cout << "L'etat: " << Automate[i]->get_number() << " a une transition spontanne" <<endl;
+                asynchrone = true;
+            }
+        }
+    }
+    if (asynchrone == true){
+        return true;
+    }
+    else{
+        return false;
     }
 }

@@ -22,6 +22,8 @@ void init_automate(std::vector<Etat*> &ListEtats, std::vector<std::string> &tab_
 
 //Affichage
 std::string afficher_type_etat(Etat etat);
-void afficher_automate(std::vector<Etat*> ListEtats, std::vector<std::string>transitionName);
+void afficher_automate(const std::vector<Etat*> ListEtats, const std::vector<std::string>transitionName);
 
+//Déterminisation
+bool est_un_automate_asynchrone(const std::vector<Etat*> Automate);
 #endif // AUTOMATE_H_INCLUDED
