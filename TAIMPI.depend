@@ -50,7 +50,7 @@
 	"transition.h"
 	<vector>
 
-1526084414 source:c:\users\dclae\documents\github\taimpi\automate.cpp
+1526123329 source:c:\users\dclae\documents\github\taimpi\automate.cpp
 	<iostream>
 	<string>
 	<vector>
@@ -62,7 +62,7 @@
 	"fichier.h"
 	"transition.h"
 
-1526084374 c:\users\dclae\documents\github\taimpi\automate.h
+1526123354 c:\users\dclae\documents\github\taimpi\automate.h
 	<iostream>
 	"automate.h"
 	"fichier.h"
@@ -92,7 +92,7 @@
 	"fichier.h"
 	"transition.h"
 
-1526081607 source:c:\users\dclae\documents\github\taimpi\main.cpp
+1526122820 source:c:\users\dclae\documents\github\taimpi\main.cpp
 	<iostream>
 	"automate.h"
 	"fichier.h"

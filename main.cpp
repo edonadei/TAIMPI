@@ -20,11 +20,10 @@ int main()
 
     informations_etat(Etat_1);
     informations_etat(Etat_2);*/
+    vector<string> transitionName;
     vector<Etat*> ListEtats;
-    init_automate(ListEtats);
-    for(unsigned i=0; i<ListEtats.size();i++){
-            informations_etat(*ListEtats[i]);
-        }
+    init_automate(ListEtats, transitionName);
+    afficher_automate(ListEtats, transitionName);
 
     return 0;
 }

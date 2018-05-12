@@ -86,6 +86,9 @@ void link_transition_etat(int ligne, vector<Etat*> ListEtats, const vector<strin
                 j = ListEtats.size() + 1;
                 creer_liaison(*ListEtats[ligne],*ListEtats[nbr_sortie],tab_transition_name[i-2]);
             }
+            else if(j == ListEtats.size() - 1){
+                creer_liaison(*ListEtats[ligne],*ListEtats[ligne],"-");
+            }
         }
     }
 }
@@ -103,7 +106,7 @@ void creat_etats(vector<Etat*> &ListEtats, const vector< vector<string> > tab_au
     }
 }
 
-void init_automate(vector<Etat*> &ListEtats)
+void init_automate(vector<Etat*> &ListEtats, vector<string> &tab_transition_name)
 {
     string name_folder = "automates/automate-1.txt";
     ifstream fichier(name_folder.c_str(), ios::in); //Ouverture du fichier en monde lecture
@@ -124,7 +127,6 @@ void init_automate(vector<Etat*> &ListEtats)
         split_str_to_array(tab_automate,ligne_buff);
 
         //Nom des transitions
-        vector<string> tab_transition_name;
         transition_name(tab_transition_name, tab_automate[0]);
 
         //Création des Etats et transitions
@@ -133,6 +135,32 @@ void init_automate(vector<Etat*> &ListEtats)
     else{
         cerr << "L'automate n'existe pas" << endl;
     }
+}
 
+string afficher_type_etat(Etat etat){ //Donne le type de l'etat en lettre
+    if(etat.get_entree() == 1 && etat.get_sortie() == 1){
+        return "ES";
+    }else if(etat.get_entree() == 1){
+        return "E";
+    }else if(etat.get_sortie() == 1){
+        return "S";
+    }else{
+        return "-";
+    }
+}
+void afficher_automate(vector<Etat*> ListEtats, vector<string> transitionName){
 
+    cout << "\t" << "Etat"; //Données du tableau
+    for (unsigned i=0; i<transitionName.size(); i++){
+        cout << "\t" << transitionName[i];
+    }
+    cout << endl;
+    //Affichage de chaque états
+    for (unsigned i=0; i<ListEtats.size();i++){
+        cout << afficher_type_etat(*ListEtats[i]) << "\t" << ListEtats[i]->get_number(); //Affichage type,nom
+        for(unsigned j=0; j<ListEtats[i]->TrList.size(); j++){//Affichage transition
+            cout << "\t" << ListEtats[i]->TrList[j]->get_letter();
+        }
+        cout << endl;
+    }
 }
