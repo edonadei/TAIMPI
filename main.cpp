@@ -22,9 +22,11 @@ int main()
     informations_etat(Etat_2);*/
     vector<string> transitionName;
     vector<Etat*> ListEtats;
+
+    vector<Etat*> AutomateDeterminist;
     init_automate(ListEtats, transitionName);
     afficher_automate(ListEtats, transitionName);
-    cout << "Est-il asynchrone? : " <<est_un_automate_asynchrone(ListEtats) << endl;
+    //cout << "Est-il asynchrone? : " <<est_un_automate_asynchrone(ListEtats) << endl;
 
     return 0;
 }

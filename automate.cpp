@@ -25,6 +25,12 @@ Etat_entree.Attacher_Entree(Transition_entre_deux);
 Etat_sortie.Attacher_Sortie(Transition_entre_deux);
 }
 
+void no_liaison(Etat &etat_sans_liaison){
+    Transition *Pas_de_transition = new Transition("-");
+    etat_sans_liaison.PasAttacher(Pas_de_transition);
+
+}
+
 void informations_etat (Etat &Etat_a_verifier)
 {
     cout << "Verification de l'etat, chiffre: " << Etat_a_verifier.get_number() << " | Entree: " << Etat_a_verifier.get_entree() << " | Sortie: "<< Etat_a_verifier.get_sortie()<< " | Poubelle: " << Etat_a_verifier.get_poubelle() << endl << endl;
@@ -87,7 +93,7 @@ void link_transition_etat(int ligne, vector<Etat*> ListEtats, const vector<strin
                 creer_liaison(*ListEtats[ligne],*ListEtats[nbr_sortie],tab_transition_name[i-2]);
             }
             else if(j == ListEtats.size() - 1){
-                creer_liaison(*ListEtats[ligne],*ListEtats[ligne],"-");
+                    no_liaison(*ListEtats[ligne]);
             }
         }
     }
@@ -159,10 +165,14 @@ void afficher_automate(const vector<Etat*> ListEtats, const vector<string> trans
     for (unsigned i=0; i<ListEtats.size();i++){
         cout << afficher_type_etat(*ListEtats[i]) << "\t" << ListEtats[i]->get_number(); //Affichage type,nom
         for(unsigned j=0; j<ListEtats[i]->TrList.size(); j++){//Affichage transition
-            cout << "\t" << ListEtats[i]->TrList[j]->get_letter();
+            cout << "\t" << ListEtats[i]->TrList[j]->get_EtSortie()->get_number();
         }
         cout << endl;
     }
+}
+
+void determinisation(vector<Etat*> AutomateDeterministe){
+
 }
 
 bool est_un_automate_asynchrone(const vector<Etat*> Automate){

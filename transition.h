@@ -18,9 +18,12 @@ public:
     // Attacher un état à la transition
     void AttacherEntree(Etat *Etat1);
     void AttacherSortie(Etat *Etat1);
+    void NoTransition(Etat *Etat1);
     std::string get_letter();
     Etat* get_EtEntree();
     Etat* get_EtSortie();
+
+    void set_lettre(std::string _lettre);
 
 
 private:

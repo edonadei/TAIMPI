@@ -35,6 +35,12 @@ void Etat::Attacher_en_retour(Transition &Transition1)
         TrList.push_back(&Transition1);
 }
 
+void Etat::PasAttacher(Transition *Transition1){
+    Transition1->NoTransition(this);
+    TrList.push_back(Transition1);
+
+}
+
 // Getters
 
 string Etat::get_number()

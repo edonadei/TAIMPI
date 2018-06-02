@@ -16,6 +16,7 @@ public:
     // Attacher une transition à l'état
     void Attacher_Entree(Transition *Transition1);
     void Attacher_Sortie(Transition *Transition1);
+    void PasAttacher(Transition *Transition1);
     // Getters
     std::string get_number();
     bool get_poubelle();

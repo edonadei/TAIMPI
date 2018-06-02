@@ -37,6 +37,11 @@ void Transition::Attacher_Sortie_en_retour(Etat *Etat1)
     EtSortie = Etat1;
 }
 
+void Transition::NoTransition(Etat *Etat1){
+    Etat *Pas_Etat = new Etat("-",false,false,false);
+    EtEntree = Etat1;
+    EtSortie = Pas_Etat;
+}
 // Getters
 
 string Transition::get_letter()
@@ -51,3 +56,9 @@ Etat* Transition::get_EtEntree(){
 Etat* Transition::get_EtSortie(){
     return EtSortie;
 };
+
+// Setters
+
+void Transition::set_lettre(string _lettre){
+    lettre = _lettre;
+}
